@@ -25,7 +25,7 @@ import {
 } from 'lucide-react';
 import { RevenueMarginChart, TransactionStatusDonut, ProviderLatencyChart } from './components/Charts';
 
-const API_BASE = "http://localhost:8005/api/v1";
+const API_BASE = import.meta.env.VITE_API_BASE_URL || "https://cheepper-bills-backend.vercel.app/api/v1";
 
 export default function App() {
   const [activeTab, setActiveTab] = useState("overview");
